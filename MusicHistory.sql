@@ -6,7 +6,19 @@
 
 ----------------------------------------------------------
 --3. Write a SELECT query that lists all the songs in the Song table and include the Artist name
-SELECT s.*,
-       a.ArtistName
-  FROM Song s
-       LEFT JOIN Artist a on s.ArtistId = a.id;
+ /* SELECT s.Title,
+    a.ArtistName
+ FROM Song s
+      LEFT JOIN Artist a on s.ArtistId = a.id;*/
+-----------------------------------------------------------
+
+SELECT 
+distinct
+a.ArtistName
+
+FROM Artist a
+LEFT JOIN Album al on al.ArtistId = a.id
+LEFT JOIN Genre g on al.GenreId = g.id
+
+WHERE g.Name = 'rock';
+ 
