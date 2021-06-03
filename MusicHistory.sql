@@ -21,4 +21,4 @@ LEFT JOIN Album al on al.ArtistId = a.id
 LEFT JOIN Genre g on al.GenreId = g.id
 
 WHERE g.Name = 'rock';
- 
+mds;ds 
